@@ -241,17 +241,13 @@ class Assert {
      */
     static public void assertEquals(double actual, double expected, double delta, String message) {
         // handle infinity specially since subtracting to infinite values gives
-        // NaN and the
-        // the following test fails
+        // NaN and the the following test fails
         if (Double.isInfinite(expected)) {
             if (!(expected == actual)) {
                 failNotEquals(new Double(actual), new Double(expected), message);
             }
-        } else if (!(Math.abs(expected - actual) <= delta)) { // Because
-                                                                // comparison
-                                                                // with NaN
-                                                                // always
-                                                                // returns false
+        } else if (!(Math.abs(expected - actual) <= delta)) {
+            // Because comparison with NaN always returns false
             failNotEquals(new Double(actual), new Double(expected), message);
         }
     }
@@ -290,8 +286,7 @@ class Assert {
      */
     static public void assertEquals(float actual, float expected, float delta, String message) {
         // handle infinity specially since subtracting to infinite values gives
-        // NaN and the
-        // the following test fails
+        // NaN and the the following test fails
         if (Float.isInfinite(expected)) {
             if (!(expected == actual)) {
                 failNotEquals(new Float(actual), new Float(expected), message);
@@ -1002,7 +997,7 @@ class Assert {
 
     }
 
-    /////
+    //
     // assertNotEquals
     //
 
