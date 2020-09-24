@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.sourceforge.streamsupport</groupId>
 	<artifactId>android-cfuture21-tests</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 
 	<dependencies>
 		<dependency>
@@ -48,6 +48,9 @@
 						<exclude>java/util/concurrent/UnsafeAccess*</exclude>
 						<exclude>java/util/concurrent/Mock*</exclude>
 						<exclude>java/util/concurrent/Utils*</exclude>
+						<!-- exclude the JSR 166 test for now, we'll get to that later -->
+						<exclude>android/cfuture21/test/JSR166TestCase*</exclude>
+						<exclude>android/cfuture21/test/CompletableFutureTest*</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
